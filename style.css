@@ -1,0 +1,385 @@
+/* @import url(//db.onlinewebfonts.com/c/6aa06a9a432b8417171f60d8351aa310?family=Torus+Notched+SemiBold);
+@font-face {font-family: "Torus Notched SemiBold"; src: url("//db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.eot"); src: url("//db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.woff") format("woff"), url("//db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.svg#Torus Notched SemiBold") format("svg"); } */
+*
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "poppins",sans-serif;
+    scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button{
+    font-family: "poppins";
+}
+body{
+    overflow-x: hidden;
+    max-width: 1920px;
+}
+/* **********header************* */
+header
+{
+    height:120px;
+    width: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    
+}
+header .container{
+    width:1500px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+header .container .logo
+{
+    margin-left: 20px;
+}
+header .container ul {
+    height:100%;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+
+} 
+header .container ul a {
+    font-size: 1.2em;
+    font-weight: 500;
+    color:#66aefc ;
+    margin: 0 30px;
+    text-transform: capitalize;
+}
+@media (max-width: 750px){
+
+    header .logo
+    {
+       display: none;
+    }
+    header .container
+    {
+        justify-content: center;
+    }
+header .container ul a {
+    margin: 0 10px;    
+}
+}
+/*      *********section1 ******** */
+.section1 button{
+    position: relative;
+    height: 70px;
+    width: 250px;
+    border-radius: 50px;
+    border:3px solid #31489f;
+    background-color: white;
+    font-size: 1.5em;
+    color: #31489f;
+    transition:0.3s;
+    z-index: 2;
+    overflow:hidden
+}
+.section1 button::before{
+    content:"";
+    position: absolute;
+    top:-2px;
+    left: -2px;
+    transform: translate(-100%);
+    height: 70px;
+    width: 282px;
+    border-radius: 50px;
+    border:3px solid #31489f;
+    background-color:#31489f;
+    font-size: 1.5em;
+    color: white;
+    transition: 0.3s;
+    z-index: -1;
+}
+.section1 button:hover::before{
+  transform: translate(-1%);
+}
+.section1 button:hover{
+    color: white;
+    width: 282px;
+}
+
+.section1 button i{
+    transform:scale(0);  /*autre maniere de le rendre invisible */
+    margin:-10px;
+    transition: 0.3s;
+}
+.section1 button:hover i{
+   transform:scale(1);
+    margin-left: 10px;
+}
+
+
+@media (min-width: 1500px)
+{ 
+.section1{
+    height: 100vh;
+    background-image:url(assets/images/13.png);
+    background-repeat: no-repeat;
+    background-position:top right; 
+}
+.section1 .container{
+    width:1500px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.section1 h1 {
+    color: #31489f;
+    font-size: 8em;
+    margin-bottom:70px ;
+}
+
+.bg-responsive
+{
+    display: none;
+}
+.section2 .content-top .left
+{
+    max-width: 700px;
+}
+.section2 .content-bottom .right
+{
+    max-width: 700px;
+}
+}
+/* ************section2*************/
+.section2
+{
+    background-color:#232323 ;
+   
+}
+.section2 .content
+{
+    margin:50px 0 0 0;
+}
+.section2 .container
+{
+    width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.section2 .title
+{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    font-size: 3em;
+    text-transform: capitalize;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+.section2 .title::before
+{
+    content:"" ;
+    position: absolute;
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: #66aefc;
+    clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 80%,
+    80% 35%,
+    64% 100%,
+    48% 53%,
+    31% 100%,
+    16% 35%,
+    0 80%
+    );
+    top:100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section2 p 
+{
+    max-width: 600px;
+    line-break:anywhere ;
+}
+.section2 .left
+{
+    color: white;
+}
+
+.section2 .content-bottom h2,
+.section2 .content-top h2
+{
+    font-size: 2.5em;
+}
+.section2 .content 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.section2 .point
+{
+    width: 20px;
+    height: 20px;
+    background-color: #31489f;
+    border:2px solid white;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.section2 .separateur
+{
+    width: 75px;
+    height: 7px;
+    border-radius: 0 50px 50px 0;
+    background-color: #66aefc;
+    margin-bottom:25px 0 ;
+}
+.section2 .titre
+{
+    display: flex;
+    align-items: center;
+
+} 
+/* ********transition********** */
+.transition img
+{
+    width: 100%;
+    position: absolute;
+    transform: translateY(-30%);
+    filter:drop-shadow(0 10px 5px #acc4c8)
+    
+}
+@media (max-width:1500px) {
+header
+{
+    background-color:#66aefc ;
+    position: relative;
+    top:inherit;
+    left: inherit;
+}
+header .container ul a {
+    color: white;
+}
+header .container{
+    width: 100%;
+    }
+
+.section1
+{
+    height: 100%;
+}
+.section1 .container
+{
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.section1
+{
+    margin-top: 100px;
+}
+.section1 h1 {
+    color: #31489f;
+    font-size: 4em;
+    margin-bottom: 60px;
+}
+
+.section1 .bg-responsive{
+    margin: 50px 0;
+} 
+.section1 .bg-responsive img{ 
+    width:575px;  
+}
+.section2 .container
+{
+    width: 100%;
+}
+.section2 .content img 
+{
+    width: 90%;
+}
+.section2 .content-top
+{
+    flex-direction: column;
+}
+.section2 .content-bottom
+{
+    flex-direction: column-reverse;
+}
+
+.section2 p 
+{
+    max-width: 900px;
+    line-break:anywhere ;
+    margin: 0 50px;
+}
+.section2 .titre
+{
+    flex-direction: column;
+    justify-content: center;
+} 
+.section2 .content-top .left,
+.section2 .content-bottom  .right
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.section2 .separateur
+{
+    border-radius: 50px;
+    margin: 10px;
+}
+.section2 .point
+{
+   
+    margin-right: 0px;
+}
+
+}
+@media (max-width: 750px)
+{
+
+.section1 .bg-responsive img {
+    width: inherit;
+}
+.section1 h1 {
+    font-size: 4em;
+}
+}    
+@media (max-width: 950px){
+.section1 h1 {
+    font-size: 5em;
+    margin-bottom:60px ;
+}
+    
+}
+@media (max-width: 500px){
+.section1 h1 {
+    font-size: 2em;
+}
+.section2 h2
+{
+    font-size: 1.5em;
+}
+
+}
